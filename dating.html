@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Datingapp</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Velkommen til datingappen!</h1>
+
+    <section id="profile">
+      <h2>Min profil</h2>
+      <p id="profile-info"></p>
+      <button id="edit-profile-btn">Rediger profil</button>
+      <div id="edit-form" style="display: none">
+        <input id="edit-location" placeholder="Oppdater bosted" />
+        <button id="save-profile-btn">Lagre</button>
+      </div>
+    </section>
+
+    <section id="filter">
+      <h2>Filter</h2>
+      <label
+        >Kjønn:
+        <select id="gender-filter">
+          <option value="">Alle</option>
+          <option value="male">Mann</option>
+          <option value="female">Kvinne</option>
+        </select>
+      </label>
+      <label
+        >Aldersgrense:
+        <input type="number" id="age-filter" placeholder="Minimumsalder" />
+      </label>
+      <button id="save-filter-btn">Lagre filter</button>
+    </section>
+
+    <section id="random-user">
+      <h2>Vil du matche med denne personen?</h2>
+      <div id="user-card"></div>
+      <button id="like-btn">Ja</button>
+      <button id="dislike-btn">Nei</button>
+      <button id="rose-btn">Gi rose 🌹</button>
+      <div id="likes-container"></div>
+    </section>
+
+    <section id="liked">
+      <h2>Mine likes</h2>
+      <ul id="liked-list"></ul>
+    </section>
+
+    <script type="module" src="js/dating.js"></script>
+  </body>
+</html>
