@@ -229,3 +229,14 @@ document.getElementById("rose-btn").addEventListener("click", async () => {
     console.error("Feil ved sending av rose:", err);
   }
 });
+
+// SØK I LIKTE BRUKERE
+document.getElementById("search-input").addEventListener("input", (e) => {
+  const søkeord = e.target.value.toLowerCase();
+  const likesDivs = document.querySelectorAll("#likes-container div");
+
+  likesDivs.forEach((div) => {
+    const navn = div.querySelector("strong").innerText.toLowerCase();
+    div.style.display = navn.includes(søkeord) ? "block" : "none";
+  });
+});
